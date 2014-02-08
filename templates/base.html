@@ -1,0 +1,26 @@
+{% load static from staticfiles %}
+
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>People</title>
+
+    <!-- Resources -->
+    <link rel="stylesheet" type="text/css" href="{% static "css/normalize.css" %}" />
+    <link rel="stylesheet" type="text/css" href="{% static "css/foundation.css" %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static "css/main.css" %}"/>
+
+    <script src="{% static "js/vendor/jquery.js" %}"></script>
+    <script src="{% static "js/vendor/modernizr.js" %}"></script>
+  </head>
+
+    <body>
+        {% block body %}{% endblock %}
+    </body>
+
+ <!-- More Resources -->
+  <script src="{% static "js/foundation.min.js" %}"></script>
+  <script src="{% static "js/people.js" %}"></script>
+</html>
+

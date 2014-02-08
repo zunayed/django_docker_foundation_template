@@ -1,0 +1,10 @@
+#infoBox {
+  position: fixed;
+  font-family: "Helvetica Neue", Helvetica;
+  text-decoration: none;
+  color: black;
+  /*background-color: rgba(0, 0, 0, 0.6);*/
+  font-size: 14px;
+  padding: 1em;
+  display: none;
+}
