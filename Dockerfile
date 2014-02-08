@@ -10,7 +10,7 @@ ADD . /opt/apps/djdocker
 ADD .docker/supervisor.conf /opt/supervisor.conf
 ADD .docker/run.sh /usr/local/bin/run
 RUN (cd /opt/apps/djdocker && git remote rm origin)
-RUN (cd /opt/apps/djdocker && git remote add origin https://github.com/kencochrane/django-docker.git)
+RUN (cd /opt/apps/djdocker && git remote add origin https://github.com/zunayed/django_docker_foundation_template.git)
 RUN /opt/ve/djdocker/bin/pip install -r /opt/apps/djdocker/requirements.txt
 RUN (cd /opt/apps/djdocker && /opt/ve/djdocker/bin/python manage.py syncdb --noinput)
 RUN (cd /opt/apps/djdocker && /opt/ve/djdocker/bin/python manage.py collectstatic --noinput)
