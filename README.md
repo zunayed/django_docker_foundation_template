@@ -3,17 +3,19 @@ django-docker-foundation-template
 
 Template for Django App + Foundation using Docker
 
+Initial setup needs to download several hundred MBs. After the base vms and containers have been cached future setups should take only a few seconds.
+
 
 Mac OS X  instructions
 ----------------------
 (tested on mavericks)
-vagrant, virtualbox and curl
+You will need to have vagrant, virtualbox and curl installed
 
 Create and empty directory and run the following command in terminal:
 
     $ curl https://raw.github.com/zunayed/django_docker_foundation_template/master/Vagrantfile > Vagrantfile
 
-then within the directory type 
+then cd within the directory 
 
     $ vagrant up
 
@@ -30,11 +32,13 @@ Now continue on to the linux instructions
 Linux Instructions
 ------------------
 
+If you are on ubuntu make sure you install docker via the instructions on their website. If you are on mac os this has already been taken care of in the vagrant VM
+
 clone my git repo:
 
     $ git clone https://github.com/zunayed/django_docker_foundation_template
 
-now build the docker container With a tag for easier reuse
+now build the docker container with a tag. This may take a few minutes initially. 
 
     $ sudo docker build  -t <your username>/django-docker django_docker_foundation_template
 
@@ -42,31 +46,18 @@ Running the container
 
     $ sudo docker run -d -p :8000 <your username>/django-docker
 
+If you go to a browser window and navigate to localhost:8080 you should see hello world
+
 In the vagrantfile I have setup a port forwarding from the VM to your local machine for 8080.
 Notice at the end of the vagrant file you will see this set up:
-
+```rb
 Vagrant.configure("2") do |config|
   config.vm.network "forwarded_port", guest: 8000, host: 8080,
     auto_correct: true
 end
-    
+```  
 
-Dockerfile
-----------
-Use this to build a new image
+You can get your containers ip address 
 
-    $ sudo docker build .
+    $ sudo docker inspect <container_id> | grep IPAddress
 
-With a tag for easier reuse
-
-    $ sudo docker build  -t <your username>/django-docker .
-
-Running the container
-
-    $ sudo docker run -d -p :8000 <your username>/django-docker
-    
-Get your container's IP Address:
-
-    sudo docker inspect <container_id> | grep IPAddress | cut -d '"' -f 4
-
-Now go to `<your container's ip>:8000` in your browser
