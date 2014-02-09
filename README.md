@@ -1,5 +1,5 @@
-**[Mac OS Install](#Mac OS Install)** |
-**[Linux Instructions](#Linux Instructions)** |
+**[Mac OS Install](#Mac)** |
+**[Linux Instructions](#Linux)** |
 Django + Foundation inside a docker container
 =============================================
 
