@@ -1,5 +1,7 @@
-django-docker-foundation-template
-=============
+**[Mac os Install](#Mac os Install)** |
+**[Linux Instructions](#Linux Instructions)** |
+Django + Foundation inside a docker container
+=============================================
 
 Template for Django App + Foundation using Docker
 
@@ -7,8 +9,7 @@ Initial setup needs to download several hundred MBs. After the base vms and cont
 
 Currently docker isn't nativly supported in Mac OS so we will run a VM layer to get the container up and running
 
-Mac OS X  instructions
-----------------------
+#Mac OS Install
 (tested on mavericks)
 
 
