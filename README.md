@@ -5,10 +5,13 @@ Template for Django App + Foundation using Docker
 
 Initial setup needs to download several hundred MBs. After the base vms and containers have been cached future setups should take only a few seconds.
 
+Currently docker isn't nativly supported in Mac OS so we will run a VM layer to get the container up and running
 
 Mac OS X  instructions
 ----------------------
 (tested on mavericks)
+
+
 You will need to have vagrant, virtualbox and curl installed
 
 Create and empty directory and run the following command in terminal:
