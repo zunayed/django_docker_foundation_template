@@ -9,7 +9,7 @@ Initial setup needs to download several hundred MBs. After the base vms and cont
 
 Currently docker isn't nativly supported in Mac OS so we will run a VM layer to get the container up and running
 
-# Mac OS Install
+## Mac OS Install
 (tested on mavericks)
 
 
@@ -33,7 +33,7 @@ Then install git and curl on the VM:
 
 Now continue on to the linux instructions
 
-# Linux Instructions
+## Linux Instructions
 
 If you are on ubuntu make sure you install docker via the instructions on their website. If you are on mac os this has already been taken care of in the vagrant VM
 
