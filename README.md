@@ -1,4 +1,4 @@
-**[Mac os Install](#Mac OS Install)** |
+**[Mac OS Install](#Mac OS Install)** |
 **[Linux Instructions](#Linux Instructions)** |
 Django + Foundation inside a docker container
 =============================================
@@ -33,8 +33,7 @@ Then install git and curl on the VM:
 
 Now continue on to the linux instructions
 
-Linux Instructions
-------------------
+#Linux Instructions
 
 If you are on ubuntu make sure you install docker via the instructions on their website. If you are on mac os this has already been taken care of in the vagrant VM
 
