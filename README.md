@@ -1,14 +1,15 @@
 [Mac OS Install](#Mac) |
 [Linux Instructions](#Linux) |
+[Extra](#Extra) 
+
 Django + Foundation inside a docker container
 =============================================
-
-Template for Django App + Foundation using Docker
 
 Initial setup needs to download several hundred MBs. After the base vms and containers have been cached future setups should take only a few seconds.
 
 Currently docker isn't nativly supported in Mac OS so we will run a VM layer to get the container up and running
 
+<a name="Mac"/>
 ## Mac
 (tested on mavericks)
 
@@ -23,7 +24,7 @@ then cd within the directory
 
     $ vagrant up
 
-This should take a few minutes since its downloading a VM
+This should take a few minutes since it's downloading a VM
 
     $ vagrant ssh
 
@@ -33,6 +34,7 @@ Then install git and curl on the VM:
 
 Now continue on to the linux instructions
 
+<a name="Linux"/>
 ## Linux
 
 If you are on ubuntu make sure you install docker via the instructions on their website. If you are on mac os this has already been taken care of in the vagrant VM
@@ -51,7 +53,11 @@ Running the container
 
 If you go to a browser window and navigate to localhost:8080 you should see hello world
 
-In the vagrantfile I have setup a port forwarding from the VM to your local machine for 8080.
+
+<a name="Extra"/>
+## Extra
+
+In the vagrantfile I have setup port forwarding from the VM to your local machine for 8080.
 Notice at the end of the vagrant file you will see this set up:
 ```rb
 Vagrant.configure("2") do |config|
