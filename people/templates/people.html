@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+<div class="row">
+  <br>
+  <div class="small-2 columns">
+    <h3><b>People</b></h3>
+  </div>
+
+  <div class="small-3 columns">
+    <a id="infoBox" style="display: inline;"></a>
+  </div>
+
+  <div class="small-7 columns">
+    <input type="text" id="search" placeholder="Type to search for a person"></input>
+  </div>
+
+</div>
+
+<div class="row">
+  <ul class="small-block-grid-10">
+  {% for person in people %}
+    <li class = "people" fname="{{ person.first_name }}" lname="{{ person.last_name }}" role="{{ person.title }}">
+      <img class="th" src="{{ person.profile_pic }}">
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+
+
+{% endblock %}
