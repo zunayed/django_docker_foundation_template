@@ -15,6 +15,24 @@
     <script src="{% static "js/vendor/modernizr.js" %}"></script>
   </head>
 
+  <nav class="top-bar" data-topbar>
+    <ul class="title-area">
+      <li class="name">
+        <h1><a href="{% url 'index' %}">KBS+</a></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <!-- Left Nav Section -->
+      <ul class="left">
+        <li><a href="{% url 'work' %}">Work</a></li>
+        <li><a href="{% url 'people' %}">People</a></li>
+
+      </ul>
+    </section>
+  </nav>
+
     <body>
         {% block body %}{% endblock %}
     </body>
