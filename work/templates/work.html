@@ -4,8 +4,18 @@
 
 <div class="row">
   <br>
-  <div class="small-2 columns">
-    <h3><b>Work</b></h3>
-  </div>
+    <h2><b>Work</b></h2>
+</div>
+
+{% for post in posts %}
+<div class="row">
+    <h4>{{ post.title }}</h4>
+    <p>{{ post.date_created }} , by {{ post.first_name }} {{ post.last_name }}</p>
+    <hr/>
+    <p>{{ post.content }}</p>
+
+</div>
+{% endfor %}
+
 
 {% endblock %}
