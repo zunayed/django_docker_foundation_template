@@ -40,7 +40,7 @@ def set_up():
 @with_setup(set_up)
 def test_retrieving_people():
     '''
-    check if employees were created and saved
+    check if employees were created and saved + unicode function
     '''
     saved_items = People.objects.all()
     assert saved_items.count() == 2
@@ -53,5 +53,4 @@ def test_retrieving_people():
 
     assert second_saved_item.first_name == 'Mike'
 
-    #test unicode function
     assert first_saved_item.__unicode__() == 'Zunayed Ali'
