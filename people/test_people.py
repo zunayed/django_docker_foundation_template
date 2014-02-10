@@ -14,16 +14,20 @@ def test_people_url_resolves_to_people_page_view():
     assert found.func == people_page
 
 
-def test_home_page_returns_correct_html():
+def test_people_page_returns_correct_html():
     '''
     See if page returns some html with proper headline
     '''
     request = HttpRequest()
     response = people_page(request)
     assert 'html class="no-js" lang="en">' in response.content
+    assert 'People' in response.content
 
 
 def set_up():
+    '''
+    create some sample people
+    '''
     first_person = People()
     first_person.first_name = 'Zunayed'
     first_person.last_name = 'Ali'

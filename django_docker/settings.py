@@ -14,8 +14,10 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'docker.db',                      # Or path to database file if using sqlite3.
+        # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+        'ENGINE': 'django.db.backends.sqlite3',
+        # Or path to database file if using sqlite3.
+        'NAME': 'docker.db',
     }
 }
 
@@ -113,7 +115,7 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'django_nose',
     'people',
-
+    'work',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -148,6 +150,8 @@ LOGGING = {
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
 
-# Tell nose to measure coverage on the 'foo' and 'bar' apps
+# Tell nose to check coverage on the certain apps and also create html reports
 NOSE_ARGS = [
-    '--cover-erase', '--with-coverage', '--cover-html']
+    '--cover-package=people', '--cover-package=work',
+    '--cover-erase', '--with-coverage', '--cover-html'
+    ]
