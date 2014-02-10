@@ -7,7 +7,7 @@ $('.people').hover(function(){
   var lname = $(this).attr('lname');
   var role = $(this).attr('role');
 
-  $('#infoBox').html(fname + ' ' + lname + ' - ' + role);
+  $('#info').html('<h2><b>People / ' + fname + ' ' + lname + ' - ' + role + '</b></h2>');
 });
 
 //search box
