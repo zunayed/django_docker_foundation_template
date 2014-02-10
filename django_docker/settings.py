@@ -111,7 +111,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.admin',
+    'django_nose',
     'people',
+
 )
 
 # A sample logging configuration. The only tangible logging
@@ -142,3 +144,10 @@ LOGGING = {
         },
     }
 }
+
+# Use nose to run all tests
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+# Tell nose to measure coverage on the 'foo' and 'bar' apps
+NOSE_ARGS = [
+    '--cover-erase', '--with-coverage', '--cover-html', 'people/']

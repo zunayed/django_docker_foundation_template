@@ -9,3 +9,6 @@ pip-log.txt
 .coverage
 .tox
 nosetests.xml
+
+#ignore director
+cover/
